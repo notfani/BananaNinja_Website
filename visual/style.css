@@ -1,0 +1,79 @@
+
+
+
+
+/*Отдельный стиль для заголовков*/
+h1{
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    font-family: "Ubuntu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+h2{
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+h3{
+    padding-top: 3px;
+    padding-right: 40px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+h4{
+    padding-top: 2px;
+    padding-right: 40px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.text{
+    padding-top: 3px;
+    padding-right: 40px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.none_ol_type{
+    list-style-type: none;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu{
+    list-style-type: none;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
