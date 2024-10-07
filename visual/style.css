@@ -5,9 +5,6 @@ header{
     align-items: center;
 }
 
-
-
-/*Отдельный стиль для заголовков*/
 h1{
     padding-top: 20px;
     padding-right: 40px;
@@ -18,6 +15,7 @@ h1{
     font-weight: 700;
     font-style: italic;
     font-size: xx-large;
+    max-width: 80%;
 }
 
 h2{
@@ -29,6 +27,7 @@ h2{
     font-optical-sizing: auto;
     font-weight: bolder;
     font-style: normal;
+    max-width: 80%;
 }
 
 h3{
@@ -40,6 +39,7 @@ h3{
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+    max-width: 80%;
 }
 
 h4{
@@ -51,6 +51,7 @@ h4{
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    max-width: 80%;
 }
 
 .text{
@@ -62,6 +63,7 @@ h4{
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    max-width: 80%;
 }
 
 .none_ol_type{
@@ -70,18 +72,11 @@ h4{
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    text-decoration: none;
 }
 
 .menu{
     flex-grow: 1;
-}
-
-.menu ul{
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 .menu li{
@@ -129,7 +124,7 @@ h4{
   }
   
   .menu a {
-    color: #000;
+    color: #26333b;
     text-decoration: none;
   }
 
@@ -152,3 +147,83 @@ h4{
     text-decoration: none;
   }
 
+figure .picture{
+    border-radius: 5%;
+}
+
+aside{
+    bottom: 30px;
+    right: 10px;
+}
+
+.arrow-7 {
+    margin: 40px auto 10px auto;
+    width: 38px;
+    height: 100px;
+}
+.arrow-7 span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid #fffb00;
+    border-right: 5px solid #fffb00;
+    transform: rotate(225deg);
+    margin: -16px 0;
+    animation: arrow-7 2s infinite;
+}
+.arrow-7 span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow-7 span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes arrow-7 {
+    0%{
+        opacity: 0;
+        transform: translate(0,-20px) rotate(225deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(0,20px) rotate(225deg);
+    }
+}
+
+footer{
+    flex-grow: 1;
+}
+
+footer ul{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+}
+
+footer li{
+    margin-right: 20px;
+}
+
+footer li:last-child{
+    margin-right: 0;
+}
+
+footer .active{
+    display: block;
+    padding: 8px 10px;
+    font-family: "Ubuntu", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;   
+}
+
+footer a{
+    color: #26333b;
+    text-decoration: none;
+}
