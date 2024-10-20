@@ -104,7 +104,7 @@ li a{
     flex-flow: row nowrap;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 18px;
     list-style: none;
   }
@@ -132,6 +132,7 @@ li a{
     font-family: "Ubuntu", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
+    font-size: 18px;
     font-style: bold;
     text-transform: uppercase;
   }
