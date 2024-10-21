@@ -114,11 +114,12 @@ li a{
     font-weight: 500;
     font-style: bold;
     text-transform: uppercase;
+    animation: revertColor 3s forwards;
 
   }
   
   .menu a {
-    color: #171e22;
+    color: #fffb00;
     text-decoration: none;
   }
 
@@ -133,6 +134,14 @@ li a{
     text-transform: uppercase;
   }
 
+
+
+  @keyframes revertColor {
+    100% {
+        color: #171e22;
+    }
+}
+
   .profile_button .active{
     color: #171e22;
     background-color: #fffb00;
@@ -143,8 +152,10 @@ li a{
   }
 
 aside{
-    right: 10px auto 5px auto;
-    float: right;
+    position: fixed;
+    right: 40px;
+    padding: 15px;
+    bottom: 0px;
 
 }
 
