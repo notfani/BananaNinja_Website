@@ -239,6 +239,7 @@ footer a{
 .box {
     display: inline-block;
     align-items: center;
+    overflow: scroll;
     vertical-align: text-bottom;
     justify-content: center;
     width: 700px;
