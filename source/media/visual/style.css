@@ -161,7 +161,7 @@ aside{
     position: fixed;
     right: 40px;
     padding: 15px;
-    bottom: 0px;
+    bottom: 15px;
 }
 
 .arrow-7 {
@@ -200,6 +200,10 @@ aside{
 }
 
 footer{
+    position: fixed;
+    right: 5px;
+    left: 5px;
+    bottom: 0;
     flex-grow: 1;
     background-color: #1a1d1f;
 }
@@ -215,8 +219,9 @@ footer ul{
 }
 
 main{
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
 }
 
 footer li{
@@ -287,7 +292,8 @@ input{
     margin: 10px, 0;
     border: 2px solid;
     border-color: #fffb00;
-    color: #171e22;
+    background-color: #1a1d1f;
+    color: #fffb00;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
@@ -297,7 +303,8 @@ textarea{
     margin: 10px, 0;
     border: 2px solid;
     border-color: #fffb00;
-    color: #171e22;
+    color: #fffb00;
+    background-color: #1a1d1f;
     box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
