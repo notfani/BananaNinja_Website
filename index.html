@@ -24,6 +24,27 @@
           </ul>
         </nav>
       </div>
+      <div class="notification-container" onclick="toggleNotification()">
+        <span class="notification-icon">
+          <img
+            src="source\media\free-icon-message-3128695.png"
+            alt="bell_icon"
+            width="50px"
+            height="50px"
+          />
+        </span>
+        <div class="notification-popup">
+          У вас пока что нет уведомлений, войдите в аккаунт, чтобы их увидеть.
+        </div>
+      </div>
+      <script>
+        function toggleNotification() {
+          // Переключение класса active
+          document
+            .querySelector(".notification-container")
+            .classList.toggle("active");
+        }
+      </script>
       <div class="profile_button">
         <a href="profile.html" class="active">Мой профиль</a>
       </div>
