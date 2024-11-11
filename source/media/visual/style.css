@@ -109,10 +109,10 @@ li a{
     font-size: 18px;
     line-height: 18px;
     list-style: none;
-  }
-  
-  .menu a,
-  .menu .active {
+}
+
+.menu a,
+.menu .active {
     display: block;
     padding: 8px 10px;
     font-family: "Ubuntu", sans-serif;
@@ -121,15 +121,14 @@ li a{
     font-style: bold;
     text-transform: uppercase;
     animation: revertColor 3s forwards;
+}
 
-  }
-  
-  .menu a {
+.menu a {
     color: #fffb00;
     text-decoration: none;
-  }
+}
 
-  .profile_button{
+.profile_button{
     display: block;
     padding: 8px 10px;
     font-family: "Ubuntu", sans-serif;
@@ -138,24 +137,24 @@ li a{
     font-size: 18px;
     font-style: bold;
     text-transform: uppercase;
-  }
+}
 
 
 
-  @keyframes revertColor {
+@keyframes revertColor {
     100% {
         color: #ffffff;
     }
 }
 
-  .profile_button .active{
+.profile_button .active{
     color: #171e22;
     background-color: #fffb00;
     border-radius: 8px; 
     display: block;
     padding: 8px 10px;
     text-decoration: none;
-  }
+}
 
 aside{
     position: fixed;
@@ -200,7 +199,7 @@ aside{
 }
 
 footer{
-    position: fixed;
+    position: static;
     right: 5px;
     left: 5px;
     bottom: 0;
@@ -219,9 +218,8 @@ footer ul{
 }
 
 main{
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-top: 10px;
+    margin-left: 100px;
+    margin-right: 70px;
 }
 
 footer li{
@@ -233,7 +231,7 @@ footer li:last-child{
 }
 
 footer .active{
-    display: block;
+    display: grid;
     padding: 8px 10px;
     font-family: "Ubuntu", sans-serif;
     font-optical-sizing: auto;
