@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>
-            My Banana
-        </title>
-        <link rel="icon" href="source\media\Favicon-big.ico" sizes="any">
-        <link rel="stylesheet" href="source\media\visual\style.css">
-    </head>
-    <body>
-        <main>
-            <div>
-                <h1>
-                    Регистрация
-                </h1>
-                <form autocomplete="on" method="get" name="support_form">
-                    <p class="text">
-                        <input type="text" placeholder="Логин" name="name" id="name" required>
-                    </p>
-                    <p class="text">
-                        <input type="text" placeholder="email" name="email" id="email" required> 
-                    </p>
-                    <p class="text">
-                        <input type="text" placeholder="Пароль" name="password" id="password" required>
-                    </p>
-                    <p>
-                        <button type="submit" class="active_button">Зерегистрироваться</button>
-                    </p>
-                </form>
-            </div>
-        </main>
-    </body>
+  <head>
+    <title>My Banana</title>
+    <link rel="icon" href="source\media\Favicon-big.ico" sizes="any" />
+    <link rel="stylesheet" href="source\media\visual\style.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Регистрация</h1>
+        <form autocomplete="on" method="get" name="support_form">
+          <input
+            type="text"
+            placeholder="Логин"
+            name="name"
+            id="name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            id="email"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            name="password"
+            id="password"
+            required
+          />
+          <button type="submit" class="active_button">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
