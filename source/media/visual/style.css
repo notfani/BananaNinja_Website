@@ -279,6 +279,7 @@ footer a{
     text-decoration: none;
 }
 
+
 .box {
     margin-top: 15px;
     margin-left: 15px;
@@ -293,26 +294,47 @@ footer a{
     height: 530px;
     background-color: #171e22;
     border-radius: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-a .box h2{
+.box:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    background-color: #fffb00;
+}
+
+.box:hover h2,
+.box:hover h3,
+.box:hover h4,
+.box:hover text {
+    color: #171e22;
+}
+
+a:hover .box:not(:hover) {
+    filter: blur(50px);
+}
+
+a .box h2, 
+a .box h3, 
+a .box h4, 
+a .box .text {
     text-decoration: none;
     color: #d8d8d8;
 }
 
-a .box h3{
-    text-decoration: none;
-    color: #d8d8d8;
+/* Изображение внутри бокса */
+.box img {
+    border-radius: 15px 15px 0 0;
+    max-width: 100%;
+    height: auto;
 }
 
-a .box h4{
-    text-decoration: none;
-    color: #d8d8d8;
-}
-
-a .box .text{
-    text-decoration: none;
-    color: #d8d8d8;
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .box {
+        width: 90%; /* Занимает 90% ширины экрана */
+        height: auto; /* Автоматическая высота */
+    }
 }
 
 form{
