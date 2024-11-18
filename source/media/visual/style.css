@@ -78,29 +78,9 @@ li a{
     color: #ffffff;
 }
 
-.menu{
+.menu {
     flex-grow: 1;
-}
-
-.menu li{
-    margin-right: 20px;
-}
-
-.menu li:last-child{
-    margin-right: 0;
-}
-
-.menu a{
-    padding: 8px 10px;
-}
-
-.logo{
-    margin-right: 30px;
-}
-
-.menu .active{
-    background-color: #171e22;
-    border-radius: 8px; 
+    position: relative;
 }
 
 .menu ul {
@@ -111,25 +91,77 @@ li a{
     font-size: 18px;
     line-height: 18px;
     list-style: none;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
 }
 
-.menu a,
-.menu .active {
-    display: block;
-    padding: 8px 10px;
-    font-family: "Ubuntu", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: bold;
-    text-transform: uppercase;
-    animation: revertColor 3s forwards;
+.menu ul.hidden {
+    display: none;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
 }
 
 .menu a {
-    color: #fffb00;
+    padding: 8px 10px;
+    color: #ffffff;
     text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
+.menu .active {
+    background-color: #171e22;
+    border-radius: 8px;
+
+}
+
+.menu .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .menu ul {
+    flex-direction: column;
+    background-color: rgba(23, 30, 34, 0.95);
+    position: fixed; 
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    }
+
+    .menu ul.visible {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    }
+
+    .menu ul li {
+    margin-top: 15px;
+    margin-right: 0;
+    text-align: center;
+    }
+
+    .menu .menu-toggle {
+    display: block;
+    z-index: 15;
+    }
+}
 .profile_button{
     display: block;
     padding: 8px 10px;
@@ -139,14 +171,6 @@ li a{
     font-size: 18px;
     font-style: bold;
     text-transform: uppercase;
-}
-
-
-
-@keyframes revertColor {
-    100% {
-        color: #ffffff;
-    }
 }
 
 .profile_button .active{
@@ -339,53 +363,4 @@ button{
 
 body{
     background-color: #090c0f;
-}
-
-.notification-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.notification-icon {
-    font-size: 32px;
-    color: #555;
-    transition: color 0.3s ease;
-}
-
-.notification-popup {
-    display: none; 
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    width: 250px;
-    background-color: #171e22;
-    border: 1px solid #fffb00;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
-    color: #d8d8d8;
-    animation: fadeIn 0.3s ease;
-    z-index: 10;
-        font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.notification-container.active .notification-icon {
-    color: #FFD700;
-}
-
-
-.notification-container.active .notification-popup {
-    display: block;
 }

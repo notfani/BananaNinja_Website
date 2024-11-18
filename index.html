@@ -11,16 +11,22 @@
     <header>
       <div class="logo">
         <a href="index.html">
-          <img src="source\media\Favicon big.png" width="60" height="60px" />
+          <img
+            src="source/media/Favicon big.png"
+            width="60"
+            height="60px"
+            alt="Logo"
+          />
         </a>
       </div>
       <div class="menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
         <nav>
           <ul>
-            <li class="active"><a href="news.html">Новости</a></li>
-            <li class="active"><a href="cybersport.html">Киберспорт</a></li>
-            <li class="active"><a href="forum.html">Форум</a></li>
-            <li class="active"><a href="about.html">О нас</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="cybersport.html">Киберспорт</a></li>
+            <li><a href="forum.html">Форум</a></li>
+            <li><a href="about.html">О нас</a></li>
           </ul>
         </nav>
       </div>
@@ -28,6 +34,15 @@
         <a href="profile.html" class="active">Мой профиль</a>
       </div>
     </header>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu ul");
+        menuToggle.addEventListener("click", () => {
+          menu.classList.toggle("visible");
+        });
+      });
+    </script>
     <main>
       <h1 id="News">Самое свежее</h1>
       <!--Первая нвость-->
