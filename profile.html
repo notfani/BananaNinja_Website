@@ -14,25 +14,55 @@
       const registerBtn = document.getElementById("register-btn");
       const userForm = document.getElementById("user-form");
       let mode = ""; // "login" или "register"
-      const setMode = (newMode) => {
-        mode = newMode;
-        submitBtn.style.display = "block"; // Показываем кнопку
-        submitBtn.disabled = true; // Деактивируем кнопку до ввода данных
-        userForm.style.display = "block"; // Показываем форму
-        formFields.innerHTML = ""; // Очищаем форму
+      let isCaptchaPassed = false; // Проверка прохождения капчи
+      const generateCaptcha = () => {
+        const captcha = Math.random().toString(36).substring(2, 8); // Генерируем случайный код
+        const captchaElement = `
+      <div id="captcha-container">
+        <p>Введите код: <strong>${captcha}</strong></p>
+        <input type="text" id="captcha-input" placeholder="Введите код" required />
+        <small id="captcha-error" style="color: red; display: none;">Неверный код!</small>
+      </div>`;
+        formFields.innerHTML = captchaElement; // Очищаем и добавляем только капчу
+        return captcha;
+      };
+      const showFormAfterCaptcha = () => {
         if (mode === "login") {
-          formTitle.textContent = "Войти";
           formFields.innerHTML = `
         <input type="email" placeholder="Email" name="email" id="email" required />
         <input type="password" placeholder="Пароль" name="password" id="password" required />`;
         } else if (mode === "register") {
-          formTitle.textContent = "Регистрация";
           formFields.innerHTML = `
         <input type="text" placeholder="Логин" name="username" id="username" required />
         <input type="email" placeholder="Email" name="email" id="email" required />
         <input type="password" placeholder="Пароль" name="password" id="password" required />
         <input type="password" placeholder="Повторите пароль" name="confirm_password" id="confirm_password" required />`;
         }
+        submitBtn.disabled = true; // Блокируем кнопку до заполнения формы
+      };
+      const setMode = (newMode) => {
+        mode = newMode;
+        submitBtn.style.display = "block"; // Показываем кнопку
+        submitBtn.disabled = true; // Деактивируем кнопку до прохождения проверки
+        userForm.style.display = "block"; // Показываем форму
+        formFields.innerHTML = ""; // Очищаем форму
+        isCaptchaPassed = false; // Сбрасываем капчу
+        const captchaCode = generateCaptcha(); // Генерируем капчу
+        // Проверяем капчу на ввод
+        document
+          .getElementById("captcha-input")
+          .addEventListener("input", (e) => {
+            const inputVal = e.target.value;
+            const captchaError = document.getElementById("captcha-error");
+            if (inputVal === captchaCode) {
+              isCaptchaPassed = true;
+              captchaError.style.display = "none";
+              showFormAfterCaptcha(); // Показываем форму после прохождения капчи
+            } else {
+              isCaptchaPassed = false;
+              captchaError.style.display = "block";
+            }
+          });
       };
       const validateForm = () => {
         const email = document.getElementById("email")?.value || "";
@@ -40,7 +70,7 @@
         const confirmPassword =
           document.getElementById("confirm_password")?.value || "";
         if (mode === "login") {
-          submitBtn.disabled = !(email && password); // Активируем кнопку при наличии данных
+          submitBtn.disabled = !(email && password); // Активируем кнопку после ввода данных
         } else if (mode === "register") {
           submitBtn.disabled = !(
             email &&
