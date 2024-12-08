@@ -228,6 +228,7 @@ aside{
 main{
     margin: 0 auto;
     max-width: 90%;
+    min-width: 40%;
     border-radius: 1%;
     justify-content: space-around;
     background: rgba( 255, 255, 255, 0.05 );
@@ -236,31 +237,21 @@ main{
     -webkit-backdrop-filter: blur( 6px );
     border-radius: 10px;
     border: 1px solid rgb(188, 181, 0);
+    flex: 1;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Убедимся, что высота страницы задана */
-}
-
-body {
-    display: flex;
-    flex-direction: column; /* Устанавливаем направление потока */
-    min-height: 100%; /* Минимальная высота страницы равна высоте экрана */
-}
-
-main {
-    flex-grow: 1; /* Заставляем основной контейнер занимать все доступное пространство */
-}
 
 footer {
-    height: 25vh; /* Футер занимает четверть экрана */
+    height: 60px;
     background-color: #1a1d1f;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
+    width: 100%; 
+    box-sizing: border-box; 
 }
+
 
 footer ul {
     display: flex;
@@ -294,7 +285,6 @@ footer a {
     color: #fffb00;
     text-decoration: none;
 }
-
 
 
 .box {
@@ -468,4 +458,8 @@ h1 {
 
 body{
     background-color: #090c0f;
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    min-height: 100vh; /* Высота страницы минимум на весь экран */
+    margin: 0; /* Убираем отступы */
 }
