@@ -224,24 +224,6 @@ aside{
     }
 }
 
-footer{
-    position: static;
-    right: 5px;
-    left: 5px;
-    bottom: 0;
-    flex-grow: 1;
-    background-color: #1a1d1f;
-}
-
-footer ul{
-    display: flex;
-    flex-flow: row nowrap;
-    margin-bottom: 0;
-    padding: 0;
-    font-size: 14px;
-    line-height: 18px;
-    list-style: none;
-}
 
 main{
     margin: 0 auto;
@@ -256,28 +238,63 @@ main{
     border: 1px solid rgb(188, 181, 0);
 }
 
-footer li{
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Убедимся, что высота страницы задана */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление потока */
+    min-height: 100%; /* Минимальная высота страницы равна высоте экрана */
+}
+
+main {
+    flex-grow: 1; /* Заставляем основной контейнер занимать все доступное пространство */
+}
+
+footer {
+    height: 25vh; /* Футер занимает четверть экрана */
+    background-color: #1a1d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+}
+
+footer li {
     margin-right: 20px;
 }
 
-footer li:last-child{
+footer li:last-child {
     margin-right: 0;
 }
 
-footer .active{
+footer .active {
     display: grid;
     padding: 8px 10px;
     font-family: "Ubuntu", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 
-footer a{
+footer a {
     color: #fffb00;
     text-decoration: none;
 }
+
 
 
 .box {
